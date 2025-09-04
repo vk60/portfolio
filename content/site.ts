@@ -47,7 +47,7 @@ export const projects = [
     stack: ["Nextjs", "Bootstrap","Itunes APi"],
     href: "https://example.com",
     repo: "https://github.com/vk60/MovieMax",
-    image:"/Moviemax.png",
+    image:"/ Moviemax.jpeg",
   },
   {
     title: "Ai Thumbnail",
@@ -63,7 +63,7 @@ export const projects = [
     stack: ["Nextjs", "Tailwindcss","next-auth","MongoDb"],
     href: "https://example.com",
     repo: "https://github.com/vk60/nextauthapplication",
-    image:"/nextauth.jpeg",
+    image:"/ nextauth.jpeg",
   },
   {
     title: "Video Confrence APP",
