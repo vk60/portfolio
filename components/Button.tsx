@@ -17,5 +17,5 @@ export function Button({ href, onClick, children, className, variant = "solid" }
     ghost: "text-neutral-700 hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
   }[variant];
   const cls = cn(base, styles, className);
-  return href ? <Link href={href} className={cls}>{children}</Link> : <button onClick={onClick} className={cls}>{children}</button>;
+  return href ? <Link  href={'/'} className={cls}>{children}</Link> : <button onClick={onClick} className={cls}>{children}</button>;
 }
