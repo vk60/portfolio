@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export":"next export"
+    "export": "next export"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -26,6 +26,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.13.0",
     "@types/node": "^20.14.9",
     "@types/nodemailer": "^7.0.1",
     "@types/react": "^18.3.3",
