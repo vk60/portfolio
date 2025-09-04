@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth fonts */
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* Fancy selection */
+::selection { background: #6C63FF; color: white; }
+
+/* Prose tweaks */
+.prose :where(a):not(:where([class~="not-prose"] *)) {
+  text-decoration: none;
+}
