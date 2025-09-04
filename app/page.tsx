@@ -63,8 +63,8 @@ export default function Page() {
           {experience.map((e) => (
             <motion.div key={e.role} initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-2xl border border-neutral-200/60 dark:border-neutral-800/60 p-6">
               <div className="flex items-center justify-between">
-                <h3 className="font-semibold">{e.role} • {e.company}</h3>
-                <p className="text-sm opacity-70">{e.period}</p>
+                <h3 className="font-semibold">{e.role} </h3>
+                <p className="text-sm opacity-70"></p>
               </div>
               <ul className="mt-3 list-disc pl-5 space-y-1">
                 {e.bullets.map(b => <li key={b} className="opacity-90">{b}</li>)}
