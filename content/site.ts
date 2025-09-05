@@ -45,7 +45,7 @@ export const projects = [
     title: "Movie Max",
     description: "A Movie Websit using nextjs,that show many Categories",
     stack: ["Nextjs", "Bootstrap","Itunes APi"],
-    href: "https:moviemax60.netlify.app",
+    href: "https://moviemax60.netlify.app/",
     repo: "https://github.com/vk60/MovieMax",
     image:"/ Moviemax.jpeg",
   },

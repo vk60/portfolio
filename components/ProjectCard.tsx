@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "./Button";
 import { Github, Globe } from "lucide-react";
-import Link from "next/link";
+ 
 
 type Props = {
   title: string;
