@@ -7,7 +7,7 @@ export const site = {
   availability: "Open to freelance & full‑time opportunities",
   links: {
     github: "https://github.com/",
-    linkedin: "https://linkedin.com/in/",
+    linkedin: "https://www.linkedin.com/in/vikas-yadav-509956246",
     email: "vikasy.vy6060@gmail.com"
   }
 };
@@ -21,7 +21,7 @@ export const nav = [
 
 export const skills = [
   "Next.js", "TypeScript", "React", "Tailwind CSS", "Node.js", "Express", "MongoDB", 
-  "Prisma", "Auth",  
+   "Auth",  
 ];
 
 export const projects = [
@@ -45,7 +45,7 @@ export const projects = [
     title: "Movie Max",
     description: "A Movie Websit using nextjs,that show many Categories",
     stack: ["Nextjs", "Bootstrap","Itunes APi"],
-    href: "https://example.com",
+    href: "https:moviemax60.netlify.app",
     repo: "https://github.com/vk60/MovieMax",
     image:"/ Moviemax.jpeg",
   },
