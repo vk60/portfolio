@@ -47,7 +47,7 @@ export const projects = [
     stack: ["Nextjs", "Bootstrap","Itunes APi"],
     href: "https://moviemax60.netlify.app/",
     repo: "https://github.com/vk60/MovieMax",
-    image:"/ Moviemax.jpeg",
+    image:"/moviemax.png",
   },
   {
     title: "Ai Thumbnail",
@@ -63,7 +63,7 @@ export const projects = [
     stack: ["Nextjs", "Tailwindcss","next-auth","MongoDb"],
     href: "https://example.com",
     repo: "https://github.com/vk60/nextauthapplication",
-    image:"/ nextauth.jpeg",
+    image:"/nextauth.jpeg",
   },
   {
     title: "Video Confrence APP",
@@ -72,7 +72,7 @@ export const projects = [
     href: "https://example.com",
     repo: "https://github.com/vk60/Video-confrence",
     
-    image:"/ videoconfrrence.png"
+    image:"/videoconfrrence.jpg"
   },
   {
     title: "Music Web",
