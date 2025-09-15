@@ -3,7 +3,10 @@ command = "npm run build"
 publish = ".next"
 
 [[plugins]]
-  package="@netlify/next"
+  package="@netlify/plugin-nextjs"
   
   [bild.environment]
     NODE_VERSION="18"
+    
+    [functions]
+    included_files=["**/*.html]
