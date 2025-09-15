@@ -76,8 +76,8 @@ export default function Page() {
 
       {/* Contact */}
       <Section id="contact" title="Contact">
-        <form method="post" data-netlify="true"   className="max-w-xl space-y-4">
-          <input type="hidden" name="form-name" value="contact"></input>
+        <form method="post" name="contact" data-netlify="true" action="/success"  className="max-w-xl space-y-4">
+          <input type="hidden" name="contact" value="contact"></input>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input required name="name" placeholder="Your name" className="px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />
             <input required type="email" name="email" placeholder="Your email" className="px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />
