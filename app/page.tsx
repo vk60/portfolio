@@ -112,7 +112,7 @@ export default function Page() {
 
       {/* Contact */}
       <Section id="contact" title="Contact">
-        <form method="post" onSubmit={handleSubmit} name="contact" data-netlify="true" action="/api/contact"  className="max-w-xl space-y-4">
+        <form method="post" onSubmit={handleSubmit} name="contact"   action="/api/contact"  className="max-w-xl space-y-4">
            
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input required name="name" placeholder="Your name" className="px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />

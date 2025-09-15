@@ -8,8 +8,7 @@
 
 [bild.environment]
     NODE_VERSION="18"
-[plugins.inputs]
-  disableForm=true
+ 
        
  
  
