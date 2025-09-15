@@ -10,8 +10,7 @@
     NODE_VERSION="18"
 
        
-[functions]
-    included_files=["**/*.html"]
+ 
  
 
 
