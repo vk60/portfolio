@@ -1,6 +1,6 @@
 {
-  "name": "sonam-portfolio",
-  "private": true,
+  "name": "vikas-portfolio",
+ 
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
