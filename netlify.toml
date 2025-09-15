@@ -1,0 +1,19 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+    
+  [bild.environment]
+    NODE_VERSION="18"
+
+       
+  [functions]
+    included_files=["**/*.html]
+ 
+  [[plugins]]
+    package="@netlify/plugin-nextjs"
+
+ 
+    
+    [plugins.inputs]
+         disableForms=true
