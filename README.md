@@ -1,4 +1,4 @@
-# Sonam Portfolio (Next.js 14 + Tailwind)
+# vikas yadav Portfolio (Next.js 14 + Tailwind)
 
 A sleek, animated, dark‑mode portfolio ready to deploy.
 
