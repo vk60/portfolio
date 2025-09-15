@@ -1,13 +1,49 @@
 "use client";
 import { Button } from "@/components/Button";
+ 
 import { ProjectCard } from "@/components/ProjectCard";
 import { Section } from "@/components/Section";
 import { AnimatedText } from "@/components/AnimatedText";
 import { Github, Mail, MapPin } from "lucide-react";
 import { projects, site, skills, experience } from "@/content/site";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+
 
 export default function Page() {
+  const [status, setStatus] = useState<null | "success" | "error">(null);
+  const [loading, setLoading] = useState(false);
+  const router=useRouter();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // prevent page reload
+    setLoading(true);
+    setStatus(null);
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setStatus("success");
+        router.push("/success")
+        e.currentTarget.reset(); // optional: clear the form
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div>
       {/* Hero */}
@@ -76,16 +112,18 @@ export default function Page() {
 
       {/* Contact */}
       <Section id="contact" title="Contact">
-        <form method="post" name="contact" data-netlify="true" action="/success"  className="max-w-xl space-y-4">
-          <input type="hidden" name="form-name" value="contact"></input>
+        <form method="post" onSubmit={handleSubmit} name="contact" data-netlify="true" action="/api/contact"  className="max-w-xl space-y-4">
+           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input required name="name" placeholder="Your name" className="px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />
             <input required type="email" name="email" placeholder="Your email" className="px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />
           </div>
           <input name="subject" placeholder="Subject (optional)" className="w-full px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />
           <textarea required name="message" placeholder="Tell me about your project..." rows={5} className="w-full px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />
-          <Button>Send message</Button>
+          <button type="submit"><Button > {loading ? "Sending..." : "Send"} </Button></button>
           
+     
+ 
         </form>
       </Section>
     </div>
