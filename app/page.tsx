@@ -24,9 +24,9 @@ export default function Page() {
             {site.tagline}
           </p>
           <div className="flex items-center gap-3">
-            <Button href="#projects">View Projects</Button>
-            <Button href={`mailto:${site.links.email}`} variant="outline"><Mail size={16}/> Contact</Button>
-            <Button href={site.links.github} variant="ghost"><Github size={16}/> GitHub</Button>
+            <Button ><a href="#projects">View Projects</a></Button>
+            <Button href="#contact" variant="outline"><Mail size={16}/> <a href="#contact">Contact</a></Button>
+            <Button ><Github size={16}/> <a href="https://github.com/vk60">GitHub</a></Button>
           </div>
         </div>
       </section>
@@ -76,7 +76,7 @@ export default function Page() {
 
       {/* Contact */}
       <Section id="contact" title="Contact">
-        <form method="post" action="/api/contact" className="max-w-xl space-y-4">
+        <form method="post" data-netlify="true"   className="max-w-xl space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input required name="name" placeholder="Your name" className="px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />
             <input required type="email" name="email" placeholder="Your email" className="px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />
@@ -84,7 +84,7 @@ export default function Page() {
           <input name="subject" placeholder="Subject (optional)" className="w-full px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />
           <textarea required name="message" placeholder="Tell me about your project..." rows={5} className="w-full px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />
           <Button>Send message</Button>
-          <p className="text-sm opacity-70">This form posts to an email API route. Configure SMTP in <code>.env</code>.</p>
+          
         </form>
       </Section>
     </div>
