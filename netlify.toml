@@ -3,17 +3,19 @@
   publish = ".next"
 
     
-  [bild.environment]
+[[plugins]]
+    package="@netlify/plugin-nextjs"
+
+[bild.environment]
     NODE_VERSION="18"
 
        
-  [functions]
-    included_files=["**/*.html]
+[functions]
+    included_files=["**/*.html"]
  
-  [[plugins]]
-    package="@netlify/plugin-nextjs"
+
 
  
     
-    [plugins.inputs]
+[plugins.inputs]
          disableForms=true
