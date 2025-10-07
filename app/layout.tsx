@@ -3,9 +3,9 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+ 
 import { site } from "@/content/site";
-
+import Footerwrapper from "@/components/Footerwrapper";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           <main className="px-6 md:px-10">{children}</main>
-          <Footer />
+          <Footerwrapper />
         </ThemeProvider>
       </body>
     </html>

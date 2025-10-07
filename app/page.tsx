@@ -19,8 +19,8 @@ export default function Page() {
     e.preventDefault(); // prevent page reload
     setLoading(true);
     setStatus(null);
-
-    const formData = new FormData(e.currentTarget);
+     const form=e.currentTarget;
+    const formData = new FormData(form);
 
     try {
       const res = await fetch("/api/contact", {
@@ -33,7 +33,8 @@ export default function Page() {
       if (data.success) {
         setStatus("success");
         router.push("/success")
-        e.currentTarget.reset(); // optional: clear the form
+        console.log(data)
+       form.reset(); // optional: clear the form
       } else {
         setStatus("error");
       }
@@ -48,7 +49,7 @@ export default function Page() {
     <div>
       {/* Hero */}
       <section className="relative mx-auto max-w-5xl py-20">
-        <div className="absolute inset-0 -z-10 bg-grid dark:bg-grid-dark bg-grid [background-size:var(--size,24px)_var(--size,24px)]" />
+        <div className="absolute inset-0 -z-10 bg-grid dark:bg-grid-dark [background-size:var(--size,24px)_var(--size,24px)]" />
         <div className="absolute -z-20 inset-0 bg-gradient-to-b from-brand/10 via-transparent to-transparent dark:from-brand/15" />
         <div className="flex flex-col gap-6 items-start">
           <p className="inline-flex items-center gap-2 text-sm opacity-80"><MapPin size={16}/> {site.location} • {site.availability}</p>
@@ -119,7 +120,7 @@ export default function Page() {
             <input required type="email" name="email" placeholder="Your email" className="px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />
           </div>
           <input name="subject" placeholder="Subject (optional)" className="w-full px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />
-          <textarea required name="message" placeholder="Tell me about your project..." rows={5} className="w-full px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />
+          <textarea required name="messages" placeholder="Tell me about your project..." rows={5} className="w-full px-4 py-3 rounded-xl border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent" />
           <button type="submit"><Button > {loading ? "Sending..." : "Send"} </Button></button>
           
      
